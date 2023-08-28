@@ -1,0 +1,29 @@
+{
+  "name": "azurefunctionsintypescript",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "clean": "rimraf dist",
+    "prestart": "npm run clean && npm run build",
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "@azure/data-tables": "^13.2.2",
+    "@azure/identity": "^3.2.3",
+    "@azure/keyvault-secrets": "^4.7.0",
+    "@types/uuid": "^9.0.2",
+    "bcrypt": "^5.1.0",
+    "crypto-js": "^4.1.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@azure/functions": "^3.0.0",
+    "@types/crypto-js": "^4.1.1",
+    "@types/node": "^16.18.38",
+    "rimraf": "^5.0.0",
+    "typescript": "^4.0.0"
+  }
+}

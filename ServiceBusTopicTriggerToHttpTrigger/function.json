@@ -1,0 +1,14 @@
+{
+  "bindings": [
+    {
+      "name": "mySbMsg",
+      "type": "serviceBusTrigger",
+      "direction": "in",
+      "topicName": "messages",
+      "subscriptionName": "MessagesSubscription",
+      "isSessionsEnabled": true,
+      "connection": "NibeServiceBus_SERVICEBUS"
+    }
+  ],
+  "scriptFile": "../dist/ServiceBusTopicTriggerToHttpTrigger/index.js"
+}

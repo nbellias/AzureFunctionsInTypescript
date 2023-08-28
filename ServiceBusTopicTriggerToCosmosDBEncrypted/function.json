@@ -1,0 +1,23 @@
+{
+  "bindings": [
+    {
+      "name": "mySbMsg",
+      "type": "serviceBusTrigger",
+      "direction": "in",
+      "topicName": "messages",
+      "subscriptionName": "MessagesSubscription",
+      "isSessionsEnabled": true,
+      "connection": "NibeServiceBus_SERVICEBUS"
+    },
+    {
+      "type": "cosmosDB",
+      "direction": "out",
+      "name": "outputDocumentEncrypted",
+      "databaseName": "LoggingDB",
+      "collectionName": "LogMessages",
+      "createIfNotExists": false,
+      "connectionStringSetting": "nibecosmosdb_DOCUMENTDB"
+    }
+  ],
+  "scriptFile": "../dist/ServiceBusTopicTriggerToCosmosDBEncrypted/index.js"
+}

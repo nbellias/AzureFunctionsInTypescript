@@ -1,0 +1,33 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "table",
+      "direction": "out",
+      "name": "outputTable",
+      "tableName": "orders",
+      "connection": "nibestoracc_STORAGE"
+    },
+    {
+      "type": "table",
+      "direction": "in",
+      "name": "inputTable",
+      "tableName": "orders",
+      "connection": "nibestoracc_STORAGE"
+    }
+  ],
+  "scriptFile": "../dist/HttpTriggerToAzTableStorage/index.js"
+}
